@@ -36,162 +36,146 @@
 
     .hero-overlay h1 {
         font-size: 2rem;
-        margin: 0;
-        font-weight: bold;
+        margin-bottom: 0;
+    }
+    
+    .section {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        margin: 20px auto;
+        border-radius: 8px;
+        max-width: 900px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .section {
-        padding: 20px;
-        background-color: rgba(255,255,255,0.05);
-        margin: 20px;
-        border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+    .section h2 {
+        color: #4CAF50;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 10px;
     }
 
     .code-box {
-        background-color: #111;
-        padding: 12px;
-        border-radius: 5px;
+        background-color: #0d0d0d;
+        border: 1px solid #333;
+        border-radius: 4px;
+        padding: 15px;
+        margin-top: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
         overflow-x: auto;
     }
 
-    pre {
-        color: #00e0ff;
-        font-size: 0.95rem;
-    }
-
     .btn-primary {
-        background-color: #007bff;
-        border: none;
+        background-color: #4CAF50;
+        border-color: #4CAF50;
     }
 
     .btn-primary:hover {
-        background-color: #0056b3;
+        background-color: #45a049;
+        border-color: #45a049;
     }
-
-    /* Back to Top Button */
+    
     #backToTopBtn {
         display: none;
         position: fixed;
-        bottom: 30px;
+        bottom: 20px;
         right: 30px;
         z-index: 99;
-        font-size: 20px;
         border: none;
         outline: none;
-        background-color: #007bff;
+        background-color: #4CAF50;
         color: white;
         cursor: pointer;
-        padding: 12px 16px;
-        border-radius: 50%;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
     }
+
     #backToTopBtn:hover {
-        background-color: #0056b3;
-    }
-    .section:hover{
-        transform: scale(1.01);
+        background-color: #555;
     }
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="#">My ePortfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#fullstack">Full Stack</a></li>
-        <li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
-        <li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
-        <li class="nav-item"><a class="nav-link" href="#javascript">JavaScript</a></li>
-      </ul>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#html">HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#css">CSS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#bootstrap">Bootstrap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#javascript">JavaScript</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
-<!-- Hero -->
 <div class="hero">
     <div class="hero-overlay">
-        <h1> My Web Development Portfolio</h1>
+        <h1>Sijan Kunwar</h1>
+        <p class="lead">Full Stack Developer</p>
     </div>
 </div>
 
-<!-- Full Stack -->
-<div class="section" id="fullstack">
-    <h2>What is Full Stack Development?</h2>
-    <p>
-        Full Stack means building both the parts of a website. The front-end that users see and the back-end that runs on the server. 
-        A full stack developer should know how to work with HTML, CSS, and JavaScript for the front, and also server code like PHP, Node.js or Python for the back-end.
-    </p>
-</div>
-
-<!-- HTML -->
 <div class="section" id="html">
     <h2>HTML</h2>
     <p>
-       HTML is the standard markup language used to create and structure content on the web. HTML is used to structure a web page. Below is an example of a basic HTML page:
-    
+        HTML is the foundation of all web pages. It defines the structure and content.
     </p>
     <div class="code-box">
 <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Test Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello!&lt;/h1&gt;
-  &lt;p&gt;This is a test page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
 </pre>
     </div>
-    <a href="html/html.html" target="_blank" class="btn btn-primary mt-2">Open HTML Example</a>
+    <a href="html.html" target="_blank" class="btn btn-primary mt-2">Open HTML Example</a>
 </div>
 
-<!-- CSS -->
 <div class="section" id="css">
     <h2>CSS</h2>
     <p>
-        CSS, which stands for Cascading Style Sheets, is a style sheet language used to define the presentation and visual appearance of a web page.. For example:
+        CSS is used for styling and layout. It makes a website look good.
     </p>
     <div class="code-box">
 <pre>
 body {
   background-color: lightblue;
-  font-family: Arial;
-}
-
-h1 {
-  color: darkblue;
 }
 </pre>
     </div>
-    <a href="css/css.html" target="_blank" class="btn btn-primary mt-2">Open CSS Example</a>
+    <a href="css.html" target="_blank" class="btn btn-primary mt-2">Open CSS Example</a>
 </div>
 
-<!-- Bootstrap -->
 <div class="section" id="bootstrap">
-    <h2>Bootstrap Framework</h2>
+    <h2>Bootstrap</h2>
     <p>
-        Bootstrap is a collection of ready-made HTML, CSS, and JavaScript components. It helps in making websites look good and work well on all devices.
+        Bootstrap is a popular framework for responsive, mobile-first websites, providing pre-built HTML, CSS, and JavaScript components. It helps in making websites look good and work well on all devices.
     </p>
     <div class="code-box">
 <pre>
 &lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;
 </pre>
     </div>
-    <a href="bootstrap/bootstrap.html" target="_blank" class="btn btn-primary mt-2">Open Bootstrap Example</a>
+    <a href="bootstrap.html" target="_blank" class="btn btn-primary mt-2">Open Bootstrap Example</a>
 </div>
 
-<!-- JavaScript -->
 <div class="section" id="javascript">
     <h2>JavaScript</h2>
     <p>
@@ -204,12 +188,11 @@ window.onload = function() {
 };
 </pre>
     </div>
-<a href="javascripts/javascript.html" target="_blank" class="btn btn-primary mt-2">Open JavaScript Example</a>
+<a href="javascript.html" target="_blank" class="btn btn-primary mt-2">Open JavaScript Example</a>
 
 
 </div>
 
-<!-- Back to Top Button -->
 <button id="backToTopBtn" title="Go to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
@@ -224,9 +207,11 @@ window.onload = function() {
         }
     };
 
-    backToTopBtn.onclick = function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    backToTopBtn.addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
 </script>
+
 </body>
 </html>
